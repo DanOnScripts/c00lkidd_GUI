@@ -56,7 +56,14 @@ local themes = {
 	ElementColor = Color3.fromRGB(32, 32, 38)
 }
 local themeStyles = {
-	DarkTheme = {
+	C00lkiddTheme = {
+		SchemeColor = Color3.fromRGB(0, 0, 0),
+		Background = Color3.fromRGB(0, 0, 0),
+		Header = Color3.fromRGB(0, 0, 0),
+		TextColor = Color3.fromRGB(255,255,255),
+		ElementColor = Color3.fromRGB(20, 20, 20)
+	},
+        DarkTheme = {
 		SchemeColor = Color3.fromRGB(64, 64, 64),
 		Background = Color3.fromRGB(0, 0, 0),
 		Header = Color3.fromRGB(0, 0, 0),
@@ -153,7 +160,9 @@ function Kavo.CreateLib(kavName, themeList, img)
 	if not themeList then
 		themeList = themes
 	end
-	if themeList == "DarkTheme" then
+	if themeList == "C00lkiddTheme" then
+		themeList = themeStyles.C00lkiddTheme
+        elseif themeList == "DarkTheme" then
 		themeList = themeStyles.DarkTheme
 	elseif themeList == "LightTheme" then
 		themeList = themeStyles.LightTheme
